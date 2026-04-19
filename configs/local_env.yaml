@@ -1,0 +1,8 @@
+wifi_interface: en0
+tailscale_installed: true
+preferred_exit_node: ""
+allow_exit_node_workaround: ask
+allow_state_changes: ask
+sudo_allowed_actions:
+  - flush_dns_cache
+  - renew_dhcp
