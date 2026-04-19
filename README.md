@@ -34,7 +34,7 @@ NetMedic is designed specifically for **macOS** and requires the following:
 
 3.  **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/netmedic.git
+    git clone https://github.com/CognitiveRefactor/netmedic.git
     cd netmedic
     ```
 
