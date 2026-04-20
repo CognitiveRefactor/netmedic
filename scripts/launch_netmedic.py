@@ -41,7 +41,6 @@ def main():
             interpreter.custom_instructions = config['custom_instructions']
 
         # Disable litellm API checking
-        interpreter.llm.model = "ollama/llama3.1:8b"
         interpreter.llm.supports_functions = False
         interpreter.llm.supports_vision = False
 
