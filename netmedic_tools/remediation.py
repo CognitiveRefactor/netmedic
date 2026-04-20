@@ -16,7 +16,7 @@ def renew_dhcp(interface="en0"):
         subprocess.run(["sudo", "ipconfig", "set", interface, "DHCP"], capture_output=True, text=True, check=True)
         return {"status": "success", "message": f"DHCP renewed on {interface}."}
     except subprocess.CalledProcessError as e:
-        return {"status": "error", "message": f"Failed to renew DHCP: {str(e)}"}
+        return {"status": "error", "message": f"Failed to renew DHCP: {e.stderr.strip() or str(e)}"}
 
 
 def toggle_wifi(interface="Wi-Fi"):
