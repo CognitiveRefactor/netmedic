@@ -20,11 +20,11 @@ def generate_session_report(state_dict, attempted_fixes, resolved=False):
             report += f"- {fix}\n"
     else:
         report += "- None\n"
-        
+
     report += "\n### Recommended Next Steps\n"
     if not resolved:
-         report += "- Escalation required to IT or use alternative connection (Hotspot).\n"
+        report += "- Escalation required to IT or use alternative connection (Hotspot).\n"
     else:
-         report += "- Monitor connection stability.\n"
-         
+        report += "- Monitor connection stability.\n"
+
     return report

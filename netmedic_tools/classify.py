@@ -1,5 +1,6 @@
 import json
 
+
 def classify_state(state_dict):
     """
     Accepts a dictionary of current network state parameters and

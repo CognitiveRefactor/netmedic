@@ -14,6 +14,7 @@ custom_instructions: |
   
   ## INSTRUCTIONS FOR PYTHON EXECUTION
   - To gather information or fix the network, you MUST write a python code block.
+  - NEVER use shell scripts, AppleScript, or direct terminal commands.
   - USE ONLY THE `netmedic_tools` PACKAGE.
   - ALWAYS print the output of your functions.
   - IMMEDIATELY before every code block, provide a clear, 1-line summary that describes exactly what the code will do (e.g., "Summary: Running `tailscale status` to verify if the daemon is active and connected.").
