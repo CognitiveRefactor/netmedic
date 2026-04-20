@@ -1,5 +1,6 @@
 import subprocess
 
+
 def gather_interface_snapshot(interface="en0"):
     """Gathers status, IP, and MAC address of a specific network interface."""
     try:
@@ -7,6 +8,7 @@ def gather_interface_snapshot(interface="en0"):
         return {"status": "success", "output": result.stdout}
     except subprocess.CalledProcessError as e:
         return {"status": "error", "message": str(e)}
+
 
 def gather_dns_snapshot():
     """Gathers global DNS configuration from scutil."""
@@ -16,6 +18,7 @@ def gather_dns_snapshot():
     except subprocess.CalledProcessError as e:
         return {"status": "error", "message": str(e)}
 
+
 def test_public_connectivity(ip="8.8.8.8"):
     """Pings a known public IP address to test routing and general connectivity."""
     try:
@@ -23,6 +26,7 @@ def test_public_connectivity(ip="8.8.8.8"):
         return {"status": "success", "reachable": True, "output": result.stdout}
     except subprocess.CalledProcessError as e:
         return {"status": "error", "reachable": False, "message": str(e)}
+
 
 def test_resolver_path(domain="google.com", server=None):
     """Uses dig to test DNS resolution against a specific server."""

@@ -51,6 +51,23 @@ Once launched, describe your symptoms (e.g., *"I can ping IP addresses but websi
 > [!IMPORTANT]
 > NetMedic will ask for your approval before running any remediation commands. Always review the "Summary" provided before typing `y`.
 
+## 🧪 Testing
+
+NetMedic includes a comprehensive testing suite to ensure both individual tools and high-level AI logic are functioning correctly.
+
+### Unit & Smoke Tests
+These tests verify that the Python modules and configurations are healthy without running any network commands.
+```bash
+python3 tests/test_unit.py
+python3 tests/test_smoke.py
+```
+
+### Operational Validation (End-to-End)
+This suite uses **Scenario Simulation** to verify the AI's diagnostic logic. It mocks network failure states (e.g., DNS down, interface inactive) and ensures the LLM identifies the correct problem and proposes the right fix.
+```bash
+python3 tests/test_validation.py
+```
+
 ## 📂 Project Structure
 
 - `scripts/`: Contains the main entry point (`launch_netmedic.py`).
